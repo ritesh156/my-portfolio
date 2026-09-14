@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0B192C;
+  --color-brand-burgundy: #7C2A3E;
+  --color-brand-gold: #D4AF37;
+  --color-brand-parchment: #F4ECD8;
+  --color-brand-cream: #FFFDF9;
+  --color-brand-dark: #0a0a0a;
+}
+
+body {
+  background-color: var(--color-brand-navy);
+  color: var(--color-brand-parchment);
+  font-family: 'Georgia', serif; /* A magical academic feel */
+}
+
+/* Magical scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-navy);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-burgundy);
+}
