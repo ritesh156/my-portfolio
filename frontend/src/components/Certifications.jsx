@@ -6,7 +6,7 @@ const Certifications = () => {
   const [certs, setCerts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/certifications')
+    axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/certifications`)
       .then(res => setCerts(res.data))
       .catch(err => {
         setCerts([

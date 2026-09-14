@@ -22,7 +22,7 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/skills')
+    axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/skills`)
       .then(res => setSkills(res.data))
       .catch(err => {
         setSkills([

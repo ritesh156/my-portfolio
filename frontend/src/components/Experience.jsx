@@ -6,7 +6,7 @@ const Experience = () => {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/experience')
+    axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/experience`)
       .then(res => setExperiences(res.data))
       .catch(err => {
         setExperiences([

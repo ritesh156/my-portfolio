@@ -7,7 +7,7 @@ const Education = () => {
 
   useEffect(() => {
     // If backend is down, we use fallback data
-    axios.get('http://localhost:8080/api/education')
+    axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/education`)
       .then(res => setEducation(res.data))
       .catch(err => {
         console.log("Using fallback education data");

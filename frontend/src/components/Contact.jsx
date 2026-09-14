@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
-    axios.post('http://localhost:8080/api/contact_messages', formData)
+    axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/contact`
       .then(() => {
         setStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
