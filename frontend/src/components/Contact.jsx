@@ -14,8 +14,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
-    axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/contact`
-      .then(() => {
+    axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/contact`, formData)
+    .then(() => {
+      
         setStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => setStatus(null), 5000);
